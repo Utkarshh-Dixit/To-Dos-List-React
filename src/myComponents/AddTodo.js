@@ -7,13 +7,16 @@ export const AddTodo = (props) => {
          e.preventDefault();
          if(!Title || !Desc){
             alert("Title or Description not found");
-         }
-         props.addToDo(Title, Desc);
-         setTitle("");
-         setDesc("");
+         }else{
+
+           props.addToDo(Title, Desc);
+           setTitle("");
+           setDesc("");
+          }
     }
+    
   return (
-    <div className="container my-3">
+    <div className="container my-3 bg-black" style={{background: "linear-gradient(to right, #bcff18, #00d4ff)"}}>
         <h3 className="text-center">Add a ToDo</h3>
         <form onSubmit={submit}>
             <div className="mb-3">
